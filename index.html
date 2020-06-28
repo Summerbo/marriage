@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-06-24 17:42:11
+ * @LastEditTime: 2020-06-28 10:44:09
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \marriage\index.html
+--> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,253 +14,19 @@
 	<title>丁金伟 何笑笑 结婚请帖</title>
 	<link rel="stylesheet" href="./base.css">
 	<link rel="stylesheet" href="./swiper.css">
+	<link rel="stylesheet" href="./index.css">
 	<link href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.0/animate.compat.css" rel="stylesheet">
-	<script type="text/javascript" src="./jquery.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
 	<script type="text/javascript" src="./swiper.js"></script>
 	<!-- <script type="text/javascript" src="./index.js"></script> -->
-	<style type="text/css">
-		html,body{
-			font-size: 100px;
-		}
-		body{
-			background: #af1e21;
-		}
-		@font-face {
-			font-family: 'FZSTK';
-			src: url('./FZSTK.TTF');
-		}
-		.swiper-container{
-			width: 100%;
-			height: 100%;
-		}
-		/*.swiper-wrapper{
-
-			align-items: flex-start;
-    		transition-property: transform,height;
-		}*/
-		.first{
-			width: 100%;
-			background: url('./imgs/bg.jpg') no-repeat 0 center;
-			background-size: 100%;
-		}
-		.first .inner{
-			height: 3rem;
-			position: absolute;
-			text-align: center;
-			width: 100%;
-			top: 55%;
-			transform: translateY(-50%);
-		}
-		.first .btn{
-			width: 2rem;
-			height: .6rem;
-			background:#de413c;
-			opacity: .8;
-			border-radius: .1rem;
-			color: rgb(209, 195, 56);
-			font-size: .24rem;
-			outline: 0 none;
-			border: 0 none;
-			margin-top: .5rem;
-			animation-delay: 2s !important;
-		}
-		.first .btn span{
-			font-size: .28rem;
-		}
-		h3{
-			text-align: center;
-		    color: rgb(209, 195, 56);
-		    font-size: 1rem;
-		    box-shadow: black 0px 0px 0px;
-		    font-weight: normal;
-			font-family: 'FZSTK';
-			animation-duration: 2s !important;
-			animation-delay: 1.4s !important;
-			animation-iteration-count: 2s !important;
-			margin-top: .2rem;
-		}
-		.name,.date,.place{
-			color: rgb(209, 195, 56);
-		    font-size: .36rem;
-		    box-shadow: black 0px 0px 0px;
-		    font-weight: normal;
-		    margin-top: .3rem;
-		    text-align: center;
-		}
-		.f18{
-			font-size: .15rem;
-		}
-		.name{
-			animation-delay: .3s !important;
-		}
-		.name span:first-of-type{
-			margin-right: .1rem;
-		}
-		.date{
-			font-size: .3rem;
-			animation-delay: .6s !important;
-		}
-		.two{
-			color: rgb(209, 195, 56);
-    		font-size: .32rem;
-    		line-height: 2;
-			text-align: center;
-    		/*padding-top: .2rem;*/
-		}
-		.two .inner{
-			width: 90%;
-			height: 80%;
-			margin: 1rem auto 0;
-			border: 4px solid rgb(209, 195, 56);
-		}
-		.two .inner p{
-			font-family: 'FZSTK';
-		}
-		.two .inner p:nth-of-type(1){
-			animation-delay: 0.3s !important;
-		}
-		.two .inner p:nth-of-type(2){
-			animation-delay: 0.6s !important;
-		}
-		.two .inner p:nth-of-type(3){
-			animation-delay: 0.9s !important;
-		}
-		.two .inner p:nth-of-type(4){
-			animation-delay: 1.2s !important;
-		}
-		.two .inner p:nth-of-type(5){
-			animation-delay: 1.5s !important;
-		}
-		.two .inner p:nth-of-type(6){
-			animation-delay: 1.8s !important;
-		}
-		.two .inner p:nth-of-type(7){
-			animation-delay: 2.1s !important;
-		}
-		.two .inner p:nth-of-type(8){
-			animation-delay: 2.4s !important;
-		}
-		.two .inner p:nth-of-type(9){
-			animation-delay: 2.7s !important;
-		}
-		.two .inner p:nth-of-type(10){
-			animation-delay: 3.0s !important;
-		}
-		.place{
-			font-size: .3rem;
-			margin-top: .2rem;
-			animation-delay: .8s !important;
-		}
-		.decorate{
-			width: 2rem;
-			position: absolute;
-			left: .8rem;
-			bottom: 2.2rem;
-			animation-delay: 3s !important;
-		}
-		.balloon{
-			width: .8rem;
-			position: absolute;
-			right: .5rem;
-			top: 1.5rem;
-		}
-		.couple{
-			position: absolute;
-			right: 1rem;
-			bottom: 2.2rem;
-			color: rgb(209, 195, 56);
-			font-size: .3rem;
-			animation-delay: 3s !important;
-		}
-		.couple span{
-			display: block;
-		}
-		.couple div{
-			font-size: .36rem;
-		}
-		.music{
-			position: absolute;
-			top: .3rem;
-			right: .2rem;
-			width: .5rem;
-			height: .5rem;
-			z-index: 222;
-		}
-		.roll{
-			animation:turn 2s linear infinite;
-		}
-		.arrow{
-			position: absolute;
-			left: 50%;
-			margin-left: -0.19rem;
-			bottom: .45rem;
-			width: .38rem;
-			height: .35rem;
-			opacity: 1;
-			animation: toBottom 2s linear infinite;
-			-webkit-animation: toBottom 2s linear infinite;
-			z-index: 99999;
-		}
-		#fireworks1{
-			position: absolute;
-			left: .78rem;
-			top: 1.2rem;
-			width: .6rem;
-			height: .62rem;
-			transform: scale(0);
-			animation: fireworks 3s 2s infinite;
-			z-index: 1000;
-		}
-		#fireworks2 {
-			position: absolute;
-			left: 1.38rem;
-			top: .3rem;
-			width: .38rem;
-			height: .4rem;
-			transform: scale(0);
-			animation: fireworks 3s 1s infinite;
-			z-index: 1000;
-		}
-		@keyframes turn{
-			0%{-webkit-transform:rotate(0deg);}
-			25%{-webkit-transform:rotate(90deg);}
-			50%{-webkit-transform:rotate(180deg);}
-			75%{-webkit-transform:rotate(270deg);}
-			100%{-webkit-transform:rotate(360deg);}
-		}
-		/* 动画 */
-		@keyframes toBottom{
-			50%{
-				/* top:9.68rem; */
-				/* top:1.06rem; */
-				bottom: .48rem;
-				opacity:0;
-			} 
-			100%{
-				/* top:9.48rem; */
-				/* top: 0.86rem; */
-				bottom: .45rem;
-				opacity:0;  
-			}
-		}
-		@keyframes fireworks{
-			25%{
-				transform:scaleX(0);
-				-webkit-transform:scaleX(0);  /*兼容-webkit-引擎浏览器*/
-				-moz-transform:scaleX(0);     /*兼容-moz-引擎浏览器*/
-			} 
-			100%{
-				transform:scaleX(1.5);
-				-webkit-transform:scaleX(1.5);  /*兼容-webkit-引擎浏览器*/
-				-moz-transform:scaleX(1.5);     /*兼容-moz-引擎浏览器*/
-			}
-		}
-	</style>
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js" charset="utf-8" async="async"></script>
+	<script src="https://cdn.bootcss.com/vConsole/3.2.0/vconsole.min.js"></script>
 </head>
 <body>
   	<div class="swiper-container">
-		<audio id="au" autoplay="autoplay" loop="loop" preload="auto" src="./hua.mp3">
-		      你的浏览器不支持audio标签
+		<audio id="bg-music" src="./yue.mp3" autoplay="autoplay" loop="true" preload="auto">
+			<source src="./yue.mp3" type="audio/mpeg">
+		     你的浏览器不支持audio标签
 		</audio>
 		<img src="./imgs/music.png" alt="" class="music roll" id="mui">
 		<img src="https://api.saas20.eceibs.com.cn/year/2018/images/arrow.png" alt="" class="arrow">
@@ -279,12 +53,8 @@
 					<p class="animated">每一个日子都是幸福</p>
 					<p class="animated">兹定于农历八月廿二午时</p>
 					<p class="animated">试量·长生店举办婚礼</p>
-					<p class="animated">期待您的到来</p>
+					<p class="animated">期待您和家人的到来</p>
 					<p class="animated">与我们一起见证最幸福的时刻</p>
-
-					<!-- <p class="place f18">席设：鹿邑.试量</p>
-					<p class="f18">地址：河南省周口市鹿邑县试量南头超市</p>
-					<p class="f18">时间：2020年10月08日（星期四） 12:00</p> -->
 					<img src="./imgs/11.jpg" class="decorate animated">
 					<img src="./imgs/balloon.png" class="balloon">
 
@@ -297,98 +67,113 @@
 	        </div>
 	    </div>
 	</div>
-	<script>
-		// 获取url参数
-		function GetQueryString(variable) {
-			var query = window.location.search.substring(1);
-			var vars = query.split("&");
-			for (var i=0;i<vars.length;i++) {
-				var pair = vars[i].split("=");
-				if(pair[0] == variable){return pair[1];}
-			}
-			return(false);
-		}
-
-		var name = GetQueryString('friend');
-		var final = decodeURI(name);
-
-		if(final){
-			$('#friendName').text(final)
-		}
-
-		/** Rem自适应H5 **/
-		function remFunc(doc, win) {
-			var docEl = doc.documentElement,
-					resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-					recalc = function () {
-						var clientWidth = docEl.clientWidth;
-						if (!clientWidth) return;
-						// 这里是假设在750px宽度设计稿的情况下，1rem = 100px；
-						// 可以根据实际需要修改
-						docEl.style.fontSize = 100 * (clientWidth / 639) + 'px';
-					};
-			if (!doc.addEventListener) return;
-				win.addEventListener(resizeEvt, recalc, false);
-				doc.addEventListener('DOMContentLoaded', recalc, false);
-			}
-
-		remFunc(document, window);
-
-		var mySwiper = new Swiper ('.swiper-container', {
-			direction: 'vertical', // 垂直切换选项
-			loop: true, // 循环模式选项
-			centeredSlides:true,
-			on: {
-				slideChange: function () {
-					// console.log(this.activeIndex)
-					if(this.activeIndex == 2) {
-						$('.two .inner p').addClass('fadeIn')
-						$('.decorate').addClass('fadeInLeft')
-						$('.couple').addClass('fadeInRight')
-					}
-				}
-			}
-		});
-
-		var au=document.getElementById('au');
-		var mui=document.getElementById('mui');
-		au.play();
-
-		// 音乐兼容微信自动播放
-		document.addEventListener('DOMContentLoaded', function () {
-			function audioAutoPlay() {
-				var au=document.getElementById('au');
-				au.play();
-				document.addEventListener("WeixinJSBridgeReady", function () {
-					au.play();
-				}, false);
-			}
-			audioAutoPlay();
-		});
-		document.addEventListener("WeixinJSBridgeReady", function () {
-			au.play();
-		}, false);
-
-		//点击一下停止 再点击一下播放功能
-		var flag=true;
-
-		$('.music').click(function(){
-			if(au.paused){
-				au.play();
-			}else{
-				au.pause();
-			}
-			if(flag){
-				$('.music').removeClassName('roll');
-				// bx.className='';
-				flag = !flag;
-			}else{
-				$('.music').addClassName('roll');
-				// bx.className='box1';
-				flag = !flag;
-			}
-		})
-		
-	</script>
 </body>
 </html>
+<script type="text/javascript">
+$(function(){
+	var audio = document.getElementById('bg-music');
+	var mui = document.getElementById('mui');
+	function autoPlayMusic() {
+		// 自动播放音乐效果，解决浏览器或者APP自动播放问题
+		function musicInBrowserHandler() {
+			musicPlay(true);
+			document.body.removeEventListener('touchstart', musicInBrowserHandler);
+		}
+		document.body.addEventListener('touchstart', musicInBrowserHandler);
+
+		// 自动播放音乐效果，解决微信自动播放问题
+		function musicInWeixinHandler() {
+			musicPlay(true);
+			document.addEventListener("WeixinJSBridgeReady", function () {
+				musicPlay(true);
+			}, false);
+			document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+		}
+		document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+	}
+	function musicPlay(isPlay) {
+		// var media = document.querySelector('#bg-music');
+		if (isPlay && audio.paused) {
+			audio.play();
+		}
+		if (!isPlay && !audio.paused) {
+			audio.pause();
+		}
+	}
+
+	//点击一下停止 再点击一下播放功能
+	var flag = true;
+
+	$('#mui').click(function(){
+		if(audio.paused){
+			// alert(1)
+			audio.play();
+		}else{
+			// alert(111)
+			audio.pause();
+		}
+		if(flag){
+			$('#mui').removeClass('roll');
+			flag = !flag;
+		}else{
+			$('#mui').addClass('roll');
+			// bx.className='box1';
+			flag = !flag;
+		}
+	});
+
+	autoPlayMusic();
+
+	var mySwiper = new Swiper ('.swiper-container', {
+		direction: 'vertical', // 垂直切换选项
+		loop: true, // 循环模式选项
+		centeredSlides:true,
+		on: {
+			slideChange: function () {
+				// console.log(this.activeIndex)
+				if(this.activeIndex == 2) {
+					$('.two .inner p').addClass('fadeIn')
+					$('.decorate').addClass('fadeInLeft')
+					$('.couple').addClass('fadeInRight')
+				}
+			}
+		}
+	});
+
+	// 获取url参数
+	function GetQueryString(variable) {
+		var query = window.location.search.substring(1);
+		var vars = query.split("&");
+		for (var i=0;i<vars.length;i++) {
+			var pair = vars[i].split("=");
+			if(pair[0] == variable){return pair[1];}
+		}
+		return(false);
+	}
+
+	var name = GetQueryString('friend');
+	var final = decodeURI(name);
+
+	if(final){
+		$('#friendName').text(final);
+	}
+})
+
+/** Rem自适应H5 **/
+function remFunc(doc, win) {
+	var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function () {
+				var clientWidth = docEl.clientWidth;
+				if (!clientWidth) return;
+				// 这里是假设在750px宽度设计稿的情况下，1rem = 100px；
+				// 可以根据实际需要修改
+				docEl.style.fontSize = 100 * (clientWidth / 639) + 'px';
+			};
+	if (!doc.addEventListener) return;
+		win.addEventListener(resizeEvt, recalc, false);
+		doc.addEventListener('DOMContentLoaded', recalc, false);
+	}
+
+remFunc(document, window);
+</script>
